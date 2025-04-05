@@ -2,11 +2,66 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <title>Te Amo Ana</title>
+  <title>Te Amo, Ana</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #ffc0cb, #ffe6f0);
+      color: #6a1b4d;
+      text-align: center;
+      padding: 40px;
+    }
+
+    h1 {
+      font-size: 2.5em;
+      margin-bottom: 10px;
+    }
+
+    #timer {
+      font-size: 1.8em;
+      margin-bottom: 40px;
+    }
+
+    .texto-romantico {
+      max-width: 800px;
+      margin: 0 auto;
+      font-size: 1.4em;
+      line-height: 1.8;
+      background: rgba(255, 255, 255, 0.3);
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px #ffb6c1;
+    }
+  </style>
 </head>
-<body style="text-align: center; font-family: Arial, sans-serif; background: #ffe6f0; color: #333;">
-  <h1>Desde 12 de Junho, às 9:32</h1>
-  <p>Nosso amor é tudo pra mim.</p>
-  <p>Te amo, Ana!</p>
+<body>
+  <h1>Nosso Amor</h1>
+  <div id="timer">Carregando tempo...</div>
+
+  <div class="texto-romantico">
+    <!-- Aqui você pode colar a letra que me enviou -->
+    Desde o dia 12 de Junho às 09:32, estamos juntos, e cada segundo ao seu lado é especial.  
+    Te amo, Ana. Pra sempre.
+  </div>
+
+  <script>
+    function atualizarCronometro() {
+      const inicio = new Date("June 12, 2024 09:32:00").getTime();
+      const agora = new Date().getTime();
+      const diff = agora - inicio;
+
+      const dias = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const horas = Math.floor((diff / (1000 * 60 * 60)) % 24);
+      const minutos = Math.floor((diff / (1000 * 60)) % 60);
+      const segundos = Math.floor((diff / 1000) % 60);
+
+      document.getElementById("timer").innerText =
+        `${dias} dias, ${horas} horas, ${minutos} minutos e ${segundos} segundos juntos.`;
+    }
+
+    setInterval(atualizarCronometro, 1000);
+    atualizarCronometro();
+  </script>
 </body>
-</html>criando index.html
+</html>
