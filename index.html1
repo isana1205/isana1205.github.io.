@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Isana</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to bottom, #ffe6f0, #fff);
+      font-family: 'Courier New', Courier, monospace;
+      text-align: center;
+      overflow-x: hidden;
+    }
+
+    h1 {
+      margin-top: 40px;
+      font-size: 3em;
+      color: #d63384;
+    }
+
+    .photo {
+      margin-top: 20px;
+    }
+
+    .photo img {
+      width: 250px;
+      border-radius: 15px;
+      border: 4px solid #d63384;
+    }
+
+    .message {
+      margin: 30px auto;
+      width: 90%;
+      max-width: 600px;
+      background-color: #fff0f5;
+      padding: 20px;
+      border-radius: 10px;
+      color: #333;
+      font-size: 1.2em;
+      line-height: 1.6em;
+    }
+
+    .timer {
+      margin: 20px auto;
+      font-size: 1.8em;
+      color: #ff4081;
+    }
+
+    audio {
+      margin-top: 20px;
+    }
+
+    /* Corações */
+    .heart {
+      position: fixed;
+      top: -50px;
+      color: #ff4d88;
+      animation: fall 6s linear infinite;
+    }
+
+    @keyframes fall {
+      to {
+        transform: translateY(100vh);
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Isana</h1>
+
+  <div class="photo">
+    <img src="https://raw.githubusercontent.com/isana1205/Isana/main/stitch.png" alt="Foto do casal">
+  </div>
+
+  <div class="timer" id="timer">
+    Carregando tempo...
+  </div>
+
+  <div class="message">
+    <p>
+      “Eu fiz uma amiga (Ana Clara, a pretinha fofa). Ela é piquititica kkkkk. Isso foi o que eu escrevi em agosto, quando a gente tinha feito 2 meses de amizade e eu já gostava de você, mas não queria te contar. Eu te amo e soube que te amava desde quando escutávamos ‘Todo Homem’ juntos, meu bem.”
+    </p>
+  </div>
+
+  <audio controls autoplay loop>
+    <source src="https://p.scdn.co/mp3-preview/68dd1803289c4c6be99d5e839fc2ae4e52d0d55d?cid=774b29d4f13844c495f206cafdad9c86" type="audio/mpeg">
+    Seu navegador não suporta áudio.
+  </audio>
+
+  <!-- Corações -->
+  <script>
+    function createHeart() {
+      const heart = document.createElement("div");
+      heart.classList.add("heart");
+      heart.innerText = "❤";
+      heart.style.left = Math.random() * 100 + "vw";
+      heart.style.fontSize = Math.random() * 20 + 20 + "px";
+      document.body.appendChild(heart);
+      setTimeout(() => heart.remove(), 6000);
+    }
+    setInterval(createHeart, 500);
+  </script>
+
+  <!-- Cronômetro -->
+  <script>
+    const startDate = new Date("2023-06-12T09:32:00");
+    const timerElement = document.getElementById("timer");
+
+    function updateTimer() {
+      const now = new Date();
+      const diff = now - startDate;
+
+      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+      const minutes = Math.floor((diff / (1000 * 60)) % 60);
+      const seconds = Math.floor((diff / 1000) % 60);
+
+      timerElement.textContent = `${days} dias, ${hours}h, ${minutes}min e ${seconds}s juntos`;
+    }
+
+    setInterval(updateTimer, 1000);
+    updateTimer();
+  </script>
+
+</body>
+</html>
