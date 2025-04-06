@@ -1,0 +1,9 @@
+<section class="section">
+  <h2>Nossas fotos</h2>
+  <div class="photos">
+    <img src="img/6A36E7F9-D91F-4629-B92B-11716965A637.jpeg" alt="Foto 1" />
+    <img src="img/F9D13974-2AA5-42C3-A003-01A1C5D47FB6.jpeg" alt="Foto 2" />
+    <img src="img/79224D19-87C4-40E0-A0C3-422D1BFF0391.jpeg" alt="Foto 3" />
+    <img src="img/129C386A-029C-4E99-B760-D94F22F87BA4.jpeg" alt="Foto 4" />
+  </div>
+</section>
