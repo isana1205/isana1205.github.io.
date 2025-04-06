@@ -83,8 +83,8 @@ footer {
   color: #6a1b9a;
 }
 const mensagens = [
-  "Te amo muito!",
-  "Você é tudo pra mim!",
+  "Te amo muito, macaquinha!",
+  "Você é tudo pra mim, meu bem!",
   "Cada dia com você é um presente.",
   "Sou muito grato por te ter ao meu lado.",
   "Você é meu amor eterno!"
