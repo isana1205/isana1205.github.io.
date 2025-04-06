@@ -1,48 +1,64 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Isana - O Nosso Amor</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nosso Amor</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1>Isana</h1>
-            <p>Eu fiz uma amiga (Ana Clara, a pretinha fofa). Ela é piquititica kkkkk. Isso foi o que eu escrevi em agosto, quando a gente tinha feito 2 meses de amizade e eu já gostava de você, mas não queria te contar. Eu te amo e soube que te amava desde quando escutávamos ‘Todo Homem’ juntos, meu bem.</p>
-        </header>
 
-        <div class="music-container">
-            <audio autoplay loop>
-                <source src="https://open.spotify.com/track/3YhZmqOIDldFyMDsHGUkbG?si=Cxh_wyRhRymsXdGbDA6Khw" type="audio/mp3">
-            </audio>
-        </div>
+  <header>
+    <h1>Porque eu nunca amei ninguém assim</h1>
+    <p>Essa foi a primeira mensagem salva da gente e eu nunca menti quando disse isso.</p>
+    <p class="quote">“VOCÊ NUNCA VAI INCOMODAR”</p>
+    <p>Você me disse isso quando eu estava inseguro, e me deixou confortável desde então.</p>
+  </header>
 
-        <div class="timer">
-            <h2>Tempo juntos:</h2>
-            <p id="counter"></p>
-        </div>
-
-        <div class="photo-gallery">
-            <h3>Memórias</h3>
-            <div class="gallery">
-                <!-- Insira as imagens de suas fotos aqui -->
-                <img src="https://i.postimg.cc/d78Zv8L9/077748fa-7094-4c1f-833e-97f9b43828de.jpg" alt="Foto 1">
-                <img src="https://i.postimg.cc/XpmrC258/098b0ca0-0103-4ac8-8af3-62442a568278.jpg" alt="Foto 2">
-                <img src="https://i.postimg.cc/G8CYsXZN/19d8ab3e-b7d3-4cdf-b90b-d59ec429a622.jpg" alt="Foto 3">
-                <img src="https://i.postimg.cc/zVVL3myv/2c9c54e5-c2a9-437d-ade2-ceb0d8432681.jpg" alt="Foto 4">
-                <!-- Adicione mais fotos conforme necessário -->
-            </div>
-        </div>
-
-        <div class="animations">
-            <div class="heart-animation"></div>
-            <div class="character-animation"></div>
-        </div>
-
+  <section class="photos">
+    <h2>Nossas Memórias</h2>
+    <div class="photo-gallery">
+      <img src="foto1.jpeg" alt="Foto 1" />
+      <img src="foto2.jpeg" alt="Foto 2" />
+      <img src="foto3.jpeg" alt="Foto 3" />
     </div>
+  </section>
 
-    <script src="script.js"></script>
+  <section class="textinhos">
+    <h2>Palavras que ficaram no coração</h2>
+    <blockquote>
+      queria te dizer que esses últimos meses foram sensacionais, MUITOOO bom, pq eu estive com você ao meu lado...  
+      <br><br>
+      Eu te amo muito, amor! Obrigado por tudo.
+    </blockquote>
+    <p>Isso foi o texto que você me enviou, e eu achei tão fofo, amor.</p>
+  </section>
+
+  <section class="contador">
+    <h2>Desde que nos conhecemos</h2>
+    <div class="timer">
+      <img src="ladybug.png" alt="Ladybug" class="character-left" />
+      <div id="counter"></div>
+      <img src="chatnoir.png" alt="Cat Noir" class="character-right" />
+    </div>
+  </section>
+
+  <section class="videos">
+    <h2>Nossos Momentos em Vídeo</h2>
+    <iframe src="https://drive.google.com/file/d/SEU_VIDEO_ID/preview" width="560" height="315" allow="autoplay"></iframe>
+  </section>
+
+  <section class="musicas">
+    <h2>Nossas Músicas</h2>
+    <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/5iNreMqjehoEgXBnzU2Y5k?utm_source=generator&autoplay=1" width="100%" height="152" frameBorder="0" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture" loading="lazy"></iframe>
+    
+    <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/3YhZmqOIDldFyMDsHGUkbG?utm_source=generator" width="100%" height="152" frameBorder="0" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture" loading="lazy"></iframe>
+  </section>
+
+  <footer>
+    <p>Feito com amor por você.</p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
