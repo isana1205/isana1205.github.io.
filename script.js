@@ -82,3 +82,17 @@ footer {
   background: #fce4ec;
   color: #6a1b9a;
 }
+const mensagens = [
+  "Te amo muito!",
+  "Você é tudo pra mim!",
+  "Cada dia com você é um presente.",
+  "Sou muito grato por te ter ao meu lado.",
+  "Você é meu amor eterno!"
+];
+
+let index = 0;
+
+function trocarMensagem() {
+  index = (index + 1) % mensagens.length;
+  document.getElementById("mensagem").textContent = mensagens[index];
+}
