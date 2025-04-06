@@ -1,98 +1,79 @@
 body {
-  font-family: 'Georgia', serif;
-  background-color: #fff0f5;
-  color: #5e2c58;
+  font-family: '𝖒𝖔𝖘𝖙𝖗𝖆', sans-serif;
+  background-color: #1c1c1c;
+  color: #fff;
   margin: 0;
   padding: 0;
-  text-align: center;
+  overflow-x: hidden;
 }
 
 header {
-  padding: 50px 20px;
-  background-color: #ffe6f0;
+  text-align: center;
+  padding: 50px 0;
+  background-color: #3b2d65;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
-h1, h2 {
-  font-family: 'Cursive', 'Georgia', serif;
+h1 {
+  font-size: 4rem;
+  color: #fff;
+  margin-bottom: 20px;
 }
 
-.quote {
-  font-style: italic;
-  font-size: 1.2em;
+p {
+  font-size: 1.5rem;
+  color: #ddd;
 }
 
-.photo-gallery {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
-  padding: 20px;
+#contador {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 2rem;
+  color: #ff5c8d;
 }
 
-.photo-gallery img {
-  width: 250px;
-  height: auto;
-  border-radius: 12px;
-  box-shadow: 0 5px 10px rgba(0,0,0,0.2);
-  transition: transform 0.3s;
-}
-
-.photo-gallery img:hover {
-  transform: scale(1.05);
-}
-
-.textinhos blockquote {
-  margin: 30px auto;
-  max-width: 600px;
-  font-style: italic;
-  background-color: #fff;
-  padding: 20px;
-  border-left: 5px solid #e91e63;
-  border-radius: 10px;
-}
-
-.contador {
+#galeria {
   margin: 40px 0;
-  background: #ffccf9;
-  padding: 30px 10px;
-  position: relative;
+  padding: 20px;
+  background-color: #2f1f4f;
+  text-align: center;
 }
 
-.character-left, .character-right {
-  width: 100px;
-  position: absolute;
-  top: -30px;
+.feed {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  justify-items: center;
 }
 
-.character-left {
-  left: 10px;
+.feed img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
-.character-right {
-  right: 10px;
-}
-
-#counter {
-  font-size: 1.8em;
+#videos {
+  text-align: center;
   margin-top: 40px;
+  padding: 20px;
+  background-color: #3b2d65;
+}
+
+iframe {
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
 footer {
-  padding: 20px;
-  background: #fce4ec;
-  color: #6a1b9a;
+  text-align: center;
+  margin-top: 50px;
+  padding: 30px 0;
+  background-color: #1c1c1c;
+  color: #bbb;
+  font-size: 1.2rem;
 }
-const mensagens = [
-  "Te amo muito, macaquinha!",
-  "Você é tudo pra mim, meu bem!",
-  "Cada dia com você é um presente.",
-  "Sou muito grato por te ter ao meu lado.",
-  "Você é meu amor eterno!"
-];
 
-let index = 0;
-
-function trocarMensagem() {
-  index = (index + 1) % mensagens.length;
-  document.getElementById("mensagem").textContent = mensagens[index];
+footer p {
+  margin: 0;
 }
